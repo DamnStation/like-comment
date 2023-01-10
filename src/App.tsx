@@ -1,10 +1,11 @@
 import Layout from "./components/Layout/Layout"
+import Profile from "./components/Profile"
 
 const App = () => {
 
   return (
     <Layout>
-      <div></div>
+      <div><Profile /></div>
     </Layout>
   )
 }
