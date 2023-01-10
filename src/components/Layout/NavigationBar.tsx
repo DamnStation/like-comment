@@ -3,16 +3,27 @@ import IvayloBachvarov from "../../assets/Ivaylo-Bachvarov.png"
 
 const NavigationBar = () => {
     return (
-        <div className="flex bg-white sticky pl-12 pt-3 pb-4 pr-13 justify-between z-10">
+        <div className="
+        flex 
+        justify-between 
+        bg-white
+        sticky 
+        top-0
+        h-[70px]
+        pt-3
+        pl-12 
+        pr-13
+        pb-4
+        z-20">
             <img
                 src={HackSoftLogo}
                 alt="Hack Soft Logo"
-                className=" left-11 top-3 w-60 h-11"
+                className="left-11 top-3 w-60 h-11"
             />
             <img
                 src={IvayloBachvarov}
                 alt="Profile Picture"
-                className="absolute right-14 m-1 rounded-full w-9 h-9 hover:w-12 hover:h-12 transition-all "
+                className="right-1 m-1 rounded-full w-9 h-9 hover:w-11 hover:h-11 transition-all "
             />
         </div>
     )

@@ -25,7 +25,7 @@ const Profile = () => {
                     <img
                         src={AvatarPicture}
                         alt="Profile picture"
-                        className="mt-2 ml-1 rounded-full w-11 h-11 hover:w-12 hover:h-12 transition-all" />
+                        className="mt-2 rounded-full w-11 h-11  hover:w-12 hover:h-12 transition-all" />
                     <div
                         className="pt-1 pl-1 m-2 w-32 h-14 ">
                         <div className="font-medium text-base">Ivaylo Bachvarov</div>
@@ -34,7 +34,7 @@ const Profile = () => {
                     <img
                         src={Pencil}
                         alt="Edit profile"
-                        className="ml-3 w-4 h-4 hover:w-5 hover:h-5 transition-all"
+                        className="ml-1 w-4 h-4 hover:ml-0 hover:w-5 hover:h-5 transition-all"
                     />
                 </div>
                 <div

@@ -10,7 +10,7 @@ type Props = {
 const Layout = ({ children }: Props) => {
     return (
         <>
-            <div className='h-full'>
+            <div className='relative  h-[1546px]'>
                 <NavigationBar />
                 <div className='bg-background flex w-full h-fit justify-center'>
                     <img
@@ -18,7 +18,7 @@ const Layout = ({ children }: Props) => {
                         alt="orange stripes background"
                         className="absolute right-0 top-0 w-7/12 "
                     />
-                    <div className="flex w-4/6 z-10 py-14">
+                    <div className="flex justify-center">
                         {children}
                     </div>
                     <img
