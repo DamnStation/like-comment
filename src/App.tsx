@@ -4,7 +4,7 @@ const App = () => {
 
   return (
     <Layout>
-      <div>
+      <div className="min-h-screen">
       </div>
     </Layout>
   )

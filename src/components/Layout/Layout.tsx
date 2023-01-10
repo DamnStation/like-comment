@@ -9,7 +9,7 @@ const Layout = ({ children }: Props) => {
     return (
         <>
             <NavigationBar />
-            <div>{children}</div>
+            <div className='bg-backgroundColor' >{children}</div>
             <Footer />
         </>
     )

@@ -2,7 +2,7 @@ import HackSoftLogo from "../../assets/hacksoft-logo.png"
 import IvayloBachvarov from "../../assets/Ivaylo-Bachvarov.png"
 const NavigationBar = () => {
     return (
-        <div className="flex bg-white border-b-2 sticky pl-12 pt-3 pb-4 pr-13">
+        <div className="flex bg-white sticky pl-12 pt-3 pb-4 pr-13 justify-between">
             <img
                 src={HackSoftLogo}
                 alt="Hack Soft Logo"
