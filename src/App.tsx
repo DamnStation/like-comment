@@ -1,10 +1,12 @@
+import Layout from "./components/Layout/Layout"
 
-function App() {
+const App = () => {
 
   return (
-    <div className="App">
-
-    </div>
+    <Layout>
+      <div>
+      </div>
+    </Layout>
   )
 }
 
