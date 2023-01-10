@@ -44,9 +44,8 @@ const Profile = () => {
                 text-center
                 py-3
                 border-t
-                border-profile-border
-                ">
-                    <div className="">
+                border-profile-border">
+                    <div>
                         <div className="font-medium text-base">210</div>
                         <div className="font-normal text-sm">Likes</div>
                     </div>
@@ -57,7 +56,6 @@ const Profile = () => {
                     </div>
                 </div>
             </div>
-
         </>
     )
 }
