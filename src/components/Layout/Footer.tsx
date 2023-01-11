@@ -1,8 +1,10 @@
 const Footer = () => {
     return (
         <div className="
-        absolute
+        flex
+        absolute inset-x-0 
         bottom-0
+        left-0
         w-full
         h-32 
         pt-14 

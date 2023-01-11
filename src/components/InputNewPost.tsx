@@ -20,7 +20,7 @@ const CreateNewPost = () => {
                 </div>
                 <div
                     className="flex flex-row-reverse px-[17px] py-[7px] border-t border-profile-border ">
-                    <ButtonCustom buttonText="Post" buttonType="submit" onClick={() => onClick} />
+                    <ButtonCustom buttonText="Post" buttonType="submit" onClick={(e) => onClick(e)} />
                 </div>
             </form>
         </div>

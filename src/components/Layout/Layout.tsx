@@ -10,9 +10,9 @@ type Props = {
 const Layout = ({ children }: Props) => {
     return (
         <>
-            <div className='relative  h-[1546px]'>
+            <div className='flex flex-col relative h-[1546px] w-full '>
                 <NavigationBar />
-                <div className='bg-background flex w-full h-fit justify-center'>
+                <div className='bg-background justify-center flex w-full h-fit'>
                     <img
                         src={HackSoftOrangeAsset}
                         alt="orange stripes background"
