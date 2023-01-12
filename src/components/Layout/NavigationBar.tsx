@@ -11,14 +11,14 @@ const NavigationBar = () => {
         top-0
         h-[70px]
         pt-3
-        pl-12 
+        pl-[46px] 
         pr-13
         pb-4
         z-20">
             <img
                 src={HackSoftLogo}
                 alt="Hack Soft Logo"
-                className="left-11 top-3 w-60 h-11"
+                className="left-11 top-3 w-[247.3px] h-[43.63px]"
             />
             <img
                 src={IvayloBachvarov}

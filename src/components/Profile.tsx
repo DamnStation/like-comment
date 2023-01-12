@@ -10,6 +10,7 @@ const Profile = () => {
                 bg-white 
                 w-60 
                 h-36 
+                my-2
                 border 
                 border-profile-border 
                 rounded-lg
@@ -28,8 +29,8 @@ const Profile = () => {
                         className="mt-2 rounded-full w-11 h-11  hover:w-12 hover:h-12 transition-all" />
                     <div
                         className="pt-1 pl-1 m-2 w-32 h-14 ">
-                        <div className="font-medium text-base">Ivaylo Bachvarov</div>
-                        <div className="font-normal text-profile text-sm w-max">Co-Founder, HackSoft</div>
+                        <div className="font-medium text-[16px] leading-[18.75px]">Ivaylo Bachvarov</div>
+                        <div className="font-normal text-[13px] leading-[15.23px] text-profile  w-max">Co-Founder, HackSoft</div>
                     </div>
                     <img
                         src={Pencil}

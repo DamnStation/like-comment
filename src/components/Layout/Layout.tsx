@@ -9,10 +9,10 @@ type Props = {
 
 const Layout = ({ children }: Props) => {
     return (
-        <>
-            <div className='flex flex-col relative h-[1546px] w-full '>
+        <><div className='bg-background max-h-full w-full h-full  border-4'>
+            <div className='flex flex-col relative max-h-[1546px] w-full '>
                 <NavigationBar />
-                <div className='bg-background justify-center flex w-full h-fit'>
+                <div className='flex justify-center  w-full h-full'>
                     <img
                         src={HackSoftOrangeAsset}
                         alt="orange stripes background"
@@ -29,6 +29,7 @@ const Layout = ({ children }: Props) => {
                 </div>
                 <Footer />
             </div>
+        </div>
         </>
     )
 }
