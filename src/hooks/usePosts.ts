@@ -46,7 +46,7 @@ const postObjectArray = {
       content:
         "Despite our total project numbers only increasing by 2% compared to last month, the 58 projects we are working on contain a significant increase in deliverables.",
       likes: 12,
-      dateToSeconds: 1673714157,
+      dateToSeconds: 1673314107,
     },
     {
       Id: 1000000002,
@@ -57,7 +57,7 @@ const postObjectArray = {
       content:
         "Veniam dolore et elit laboris velit adipisicing ad nulla elit duis incididunt et.",
       likes: 6,
-      dateToSeconds: 1673714707,
+      dateToSeconds: 1673314107,
     },
 
     {
@@ -69,7 +69,7 @@ const postObjectArray = {
       content:
         "Cupidatat laboris cupidatat qui aliqua dolore. Pariatur veniam proident et ipsum irure.",
       likes: 6,
-      dateToSeconds: 1673714107,
+      dateToSeconds: 1673314107,
     },
     {
       Id: 1000000004,
@@ -80,7 +80,7 @@ const postObjectArray = {
       content:
         "Cillum cillum irure aliqua ex elit duis sit non excepteur dolor.",
       likes: 3,
-      dateToSeconds: 1673715000,
+      dateToSeconds: 1373715000,
     },
   ],
 };
