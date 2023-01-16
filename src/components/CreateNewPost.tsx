@@ -2,40 +2,42 @@ import { useState } from "react";
 import ButtonCustom from "./ButtonCustom"
 import IvayloBachvarov from "../assets/Ivaylo-Bachvarov.svg";
 
-
-type Posts = {
-    Id: number;
-    userName: string;
-    profilePicture: string;
-    companyTitle: string;
-    companyName: string;
-    content: string;
-    likes: number;
-    dateToSeconds: number;
-}
-
 type Props = {
-    onCreate: (newPost: Posts) => void
+    onCreate: (newPost: {
+        Id: number;
+        userName: string;
+        profilePicture: string;
+        companyTitle: string;
+        companyName: string;
+        content: string;
+        likes: number;
+        likedBy: number[]
+        dateToSeconds: number;
+    }) => void
 }
 
 const CreateNewPost = ({ onCreate }: Props) => {
+
     const [value, setValue] = useState("")
+
     const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
         const data = new FormData(e.target as HTMLFormElement);
         const currentDateTime = new Date();
         const resultInSeconds = Math.floor(currentDateTime.getTime() / 1000);
-
+        if (value === "") return
         onCreate({
-            Id: 1924819294,
+            Id: 1036400004,
             userName: "Ivaylo Bachvarov",
             profilePicture: IvayloBachvarov,
             companyTitle: "Co-Founder",
             companyName: "HackSoft",
             content: data.get("new-post") as string,
             likes: 0,
+            likedBy: [],
             dateToSeconds: resultInSeconds,
-        })
+        }
+        )
         setValue("")
     }
 
@@ -50,7 +52,7 @@ const CreateNewPost = ({ onCreate }: Props) => {
                         value={value}
                         onChange={(e) => setValue(e.target.value)}
                         minLength={2}
-                        maxLength={200}
+                        maxLength={260}
                         placeholder="Share something to the community..."
                         className="md:w-full w-full rounded-sm outline-none font-normal text-[16px] leading-[18.75px]" ></input>
                 </div>

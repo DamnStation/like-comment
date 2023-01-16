@@ -17,6 +17,7 @@ const Footer = () => {
         text-footer
         hover:text-base 
         transition-all 
+        z-20
         ">
             Copyright 2022 HackSoft Ltd. All rights reserved. No part of this site may be reproduced without our written permission.
         </div>

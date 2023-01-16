@@ -17,7 +17,7 @@ const NavigationBar = () => {
         top-0
         h-[70px]
         p-3
-        z-10
+        z-20
         ">
       <img
         src={HackSoftLogo}
