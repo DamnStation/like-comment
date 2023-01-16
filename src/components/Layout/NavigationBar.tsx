@@ -1,27 +1,8 @@
-import { useState } from "react";
+import { memo } from "react";
 import HackSoftLogo from "../../assets/hacksoft-logo.svg"
 import IvayloBachvarov from "../../assets/Ivaylo-Bachvarov.svg"
-import { useUsers } from "../../hooks/useUsers";
-
-type Props = {
-  selectedUserProp: 0 | 1 | 2;
-};
-type Users = {
-  users: {
-    Id: number;
-    userName: string;
-    companyTitle: string;
-    companyName: string;
-    profilePicture: string;
-    likes: number;
-    posts: number;
-  }[]
-}
 
 const NavigationBar = () => {
-
-  const { users } = useUsers()
-  const [selectedUser, setSelectedUser] = useState<Users>()
 
   const onClick = () => {
     console.log("Click")
@@ -52,4 +33,4 @@ const NavigationBar = () => {
     </div>
   )
 }
-export default NavigationBar
+export default memo(NavigationBar)

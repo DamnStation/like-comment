@@ -4,7 +4,7 @@ import Profile from "./components/Profile"
 import Post from "./components/Post"
 import { usePosts } from "./hooks/usePosts"
 import { useUsers } from "./hooks/useUsers"
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 
 const App = () => {
 

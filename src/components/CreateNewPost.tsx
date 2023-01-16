@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { usePosts } from "../hooks/usePosts";
 import ButtonCustom from "./ButtonCustom"
 import IvayloBachvarov from "../assets/Ivaylo-Bachvarov.svg";
 

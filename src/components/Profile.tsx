@@ -1,4 +1,4 @@
-import AvatarPicture from "../assets/Ivaylo-Bachvarov.png"
+import { memo } from "react";
 import Pencil from "../assets/Union.svg"
 
 type Props = {
@@ -79,4 +79,4 @@ const Profile = (props: Props) => {
   )
 }
 
-export default Profile
+export default memo(Profile)
