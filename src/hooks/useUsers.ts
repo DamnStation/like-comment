@@ -1,3 +1,4 @@
+import IvayloBachvarov from "../assets/Ivaylo-Bachvarov.svg";
 export const useUsers = () => {
   return {
     users: {
@@ -5,10 +6,10 @@ export const useUsers = () => {
       userName: "Ivaylo Bachvarov",
       companyTitle: "Co-Founder",
       companyName: "HackSoft",
-      likes: 3,
+      profilePicture: IvayloBachvarov,
+      likes: 210,
       posts: 5,
     },
-
     isLoading: false,
     error: null as Error | null,
   };

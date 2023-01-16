@@ -1,9 +1,12 @@
+import { memo } from "react"
+
 const Footer = () => {
     return (
         <div className="
         flex
-        absolute inset-x-0 
+        sticky 
         bottom-0
+        inset-x-0 
         left-0
         w-full
         h-32 
@@ -14,9 +17,9 @@ const Footer = () => {
         text-footer
         hover:text-base 
         transition-all 
-        z-10">
+        ">
             Copyright 2022 HackSoft Ltd. All rights reserved. No part of this site may be reproduced without our written permission.
         </div>
     )
 }
-export default Footer
+export default memo(Footer)

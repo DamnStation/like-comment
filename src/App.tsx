@@ -1,21 +1,28 @@
-import InputNewPost from "./components/InputNewPost"
+import CreateNewPost from "./components/CreateNewPost"
 import Layout from "./components/Layout/Layout"
 import Profile from "./components/Profile"
 import Post from "./components/Post"
 import { usePosts } from "./hooks/usePosts"
 import { useUsers } from "./hooks/useUsers"
+import { useEffect, useState } from "react"
 
 const App = () => {
 
-  const { posts } = usePosts()
   const { users } = useUsers()
+  const { posts, setPosts } = usePosts()
+
+  useEffect(() => {
+    console.log(posts, " from useEffect")
+  }, [posts])
   return (
     <Layout>
-      <div className="flex space-x-8 w-4/6 z-10 py-14 ">
-        <Profile {...users} />
-        <div className="flex flex-col w-[838px] max-h-[1362px]  ">
-          <InputNewPost />
-          {posts.map((post) => (<Post key={post.Id} {...post} />))}
+      <div className="flex flex-1 justify-center m-5 ">
+        <div className="flex md:flex-row md:justify-between md:w-[838px]  flex-col ">
+          < Profile {...users} />
+          <div className="flex flex-col mt-3 md:mt-0">
+            <CreateNewPost onCreate={(newPost) => setPosts((prevState) => [newPost, ...prevState])} />
+            {posts.map((post, index) => (<Post key={index} {...post} />))}
+          </div>
         </div>
       </div>
     </Layout>

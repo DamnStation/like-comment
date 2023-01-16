@@ -1,7 +1,32 @@
-import HackSoftLogo from "../../assets/hacksoft-logo.png"
-import IvayloBachvarov from "../../assets/Ivaylo-Bachvarov.png"
+import { useState } from "react";
+import HackSoftLogo from "../../assets/hacksoft-logo.svg"
+import IvayloBachvarov from "../../assets/Ivaylo-Bachvarov.svg"
+import { useUsers } from "../../hooks/useUsers";
+
+type Props = {
+  selectedUserProp: 0 | 1 | 2;
+};
+type Users = {
+  users: {
+    Id: number;
+    userName: string;
+    companyTitle: string;
+    companyName: string;
+    profilePicture: string;
+    likes: number;
+    posts: number;
+  }[]
+}
 
 const NavigationBar = () => {
+
+  const { users } = useUsers()
+  const [selectedUser, setSelectedUser] = useState<Users>()
+
+  const onClick = () => {
+    console.log("Click")
+  }
+
   return (
     <div className="
         flex 
@@ -10,20 +35,19 @@ const NavigationBar = () => {
         sticky 
         top-0
         h-[70px]
-        pt-3
-        pl-[46px] 
-        pr-13
-        pb-4
-        z-20">
+        p-3
+        z-10
+        ">
       <img
         src={HackSoftLogo}
         alt="Hack Soft Logo"
-        className="left-11 top-3 w-[247px] h-[43px]"
+        className="md:left-11 left-auto top-3 md:w-[247px] w-fit md:h-[43px] h-fit"
       />
       <img
         src={IvayloBachvarov}
         alt="Profile Picture"
-        className="right-1 m-1 rounded-full w-9 h-9  hover:scale-110 transition-all "
+        onClick={onClick}
+        className="right-1 m-1 rounded-full w-9 h-9 hover:scale-110 transition-all "
       />
     </div>
   )
