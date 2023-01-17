@@ -10,7 +10,6 @@ type Props = {
         companyTitle: string;
         companyName: string;
         content: string;
-        likes: number;
         likedBy: number[]
         dateToSeconds: number;
     }) => void
@@ -27,13 +26,12 @@ const CreateNewPost = ({ onCreate }: Props) => {
         const resultInSeconds = Math.floor(currentDateTime.getTime() / 1000);
         if (value === "") return
         onCreate({
-            Id: 1036400004,
+            Id: Math.floor(Math.random() * 1000),
             userName: "Ivaylo Bachvarov",
             profilePicture: IvayloBachvarov,
             companyTitle: "Co-Founder",
             companyName: "HackSoft",
             content: data.get("new-post") as string,
-            likes: 0,
             likedBy: [],
             dateToSeconds: resultInSeconds,
         }

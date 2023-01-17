@@ -10,8 +10,8 @@ import ButtonCusom from "./components/ButtonCustom"
 
 const App = () => {
 
-  const { user, upsertUserPosts } = useUser()
-  const { posts, upsertPost, upsertLike } = usePosts()
+  const { user, updateUser } = useUser()
+  const { posts, upsertPost, likeDislikePost } = usePosts()
 
   const postPerRow = 3;
 
@@ -23,27 +23,28 @@ const App = () => {
 
   const onCreate = (newPost: typeof posts[0]) => {
     upsertPost(newPost)
-    upsertUserPosts();
+    updateUser({ ...user, posts: user.posts + 1 });
   }
 
-  const onClickLike = () => {
-    upsertLike(user)
+  const onClickLike = (postProp: number, userProp: number) => {
+    const addOrRemoveCount = likeDislikePost(postProp, userProp)
+    updateUser({ ...user, likes: user.likes + addOrRemoveCount })
   }
 
   useEffect(() => {
-    console.log(posts, " from useEffect")
   }, [posts])
+
   return (
     <Layout>
       <div className="flex flex-1 justify-center m-5 ">
         <div className="flex md:flex-row md:justify-between md:w-[838px] flex-col ">
-          < Profile {...user} />
+          <Profile {...user} />
           <div className="flex flex-col mt-3 md:mt-0">
             <CreateNewPost onCreate={onCreate} />
             <>{posts
               ?.sort((a, b) => a.dateToSeconds + b.dateToSeconds)
               ?.slice(0, next)
-              ?.map((post, index) => (<Post key={index} onClickLike={onClickLike} {...post} />))}</>
+              ?.map((post, index) => (<Post key={index} onClickLike={(post, user) => { onClickLike(post, user) }} {...post} />))}</>
             <div className="flex self-center">
               {next < posts?.length && (
                 <ButtonCusom

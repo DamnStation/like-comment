@@ -16,17 +16,17 @@ type Props = {
   content: string;
   likedBy: number[];
   dateToSeconds: number;
-  onClickLike: (postId: number) => void
-
+  onClickLike: (postId: number, userId: number) => void
 };
 
 const Post = (props: Props) => {
-  const { userName, profilePicture, companyName, companyTitle, content, likedBy, dateToSeconds, onClickLike } =
+  const { Id, userName, profilePicture, companyName, companyTitle, content, likedBy, dateToSeconds, onClickLike } =
     props;
   const { user } = useUser()
 
   const charsPerPost = 140;
   const [showMore, setShowMore] = useState(charsPerPost);
+
 
   const showLike = () => {
     if (likedBy.length > 0) {
@@ -50,7 +50,7 @@ const Post = (props: Props) => {
       <>
         <ButtonCusom
           buttonStyle="bg-none"
-          onClick={(likedBy) => { onClickLike() }}
+          onClick={() => { onClickLike(Id, user.Id) }}
           buttonImage={
             <img src={likeOrLiked} alt="People liked this post" className="h-6" />
           }

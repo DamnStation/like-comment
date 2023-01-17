@@ -1,7 +1,6 @@
 import { useState } from "react";
 import IvayloBachvarov from "../assets/Ivaylo-Bachvarov.svg";
 import DanielGoshev from "../assets/Daniel-Goshev.svg";
-import { useUser } from "./useUser";
 
 const postObjectArray = {
   posts: [
@@ -97,19 +96,32 @@ const postObjectArray = {
   ],
 };
 export const usePosts = () => {
-  const { user } = useUser();
-  const [posts, setPosts] = useState(postObjectArray.posts);
-  const upsertPost = (newPost: typeof posts[0]) =>
-    setPosts((prevState) => [newPost, ...prevState]);
+  const [_posts, set_Posts] = useState(postObjectArray.posts);
+  const upsertPost = (newPost: typeof _posts[0]) =>
+    set_Posts((prevState) => [newPost, ...prevState]);
 
-  const upsertLike = (userLike?: typeof user) => {
-    setPosts((prevState) => ({ ...prevState, post: prevState }));
-    console.log("test");
+  const likeDislikePost = (postId: number, userId: number) => {
+    const updatedPosts = [..._posts];
+    let addOrRemoveCount = 0;
+    updatedPosts.forEach((post) => {
+      if (post.Id === postId) {
+        if (post.likedBy.includes(userId)) {
+          post.likedBy = post.likedBy.filter((x) => x !== userId);
+          addOrRemoveCount--;
+        } else {
+          post.likedBy.push(userId);
+          addOrRemoveCount++;
+        }
+      }
+    });
+    set_Posts(updatedPosts);
+    return addOrRemoveCount;
   };
+
   return {
-    posts,
+    posts: _posts,
     upsertPost,
-    upsertLike,
+    likeDislikePost,
     isLoading: false,
     error: null as Error | null,
   };
