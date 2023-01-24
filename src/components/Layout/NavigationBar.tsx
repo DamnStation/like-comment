@@ -1,6 +1,6 @@
 import { memo } from "react";
-import HackSoftLogo from "../../assets/hacksoft-logo.svg"
-import IvayloBachvarov from "../../assets/Ivaylo-Bachvarov.svg"
+import Logo from "../../assets/LogoLogo.svg"
+import Profile1 from "../../assets/profile1.svg"
 
 const NavigationBar = () => {
 
@@ -20,12 +20,12 @@ const NavigationBar = () => {
         z-20
         ">
       <img
-        src={HackSoftLogo}
+        src={Logo}
         alt="Hack Soft Logo"
         className="md:left-11 left-auto top-3 md:w-[247px] w-fit md:h-[43px] h-fit"
       />
       <img
-        src={IvayloBachvarov}
+        src={Profile1}
         alt="Profile Picture"
         onClick={onClick}
         className="right-1 m-1 rounded-full w-9 h-9 hover:scale-110 transition-all "

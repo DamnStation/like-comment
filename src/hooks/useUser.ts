@@ -1,5 +1,5 @@
 import { useState } from "react";
-import IvayloBachvarov from "../assets/Ivaylo-Bachvarov.svg";
+import Profile1 from "../assets/profile1.svg";
 
 type User = {
   Id: number;
@@ -13,10 +13,10 @@ type User = {
 
 const userObject = {
   Id: 1036400004,
-  userName: "Ivaylo Bachvarov",
+  userName: "Radoslav Marinov",
   companyTitle: "Co-Founder",
-  companyName: "HackSoft",
-  profilePicture: IvayloBachvarov,
+  companyName: "ViewRT",
+  profilePicture: Profile1,
   likes: 210,
   posts: 4,
 };

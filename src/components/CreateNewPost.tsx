@@ -1,6 +1,6 @@
 import { useState } from "react";
 import ButtonCustom from "./ButtonCustom"
-import IvayloBachvarov from "../assets/Ivaylo-Bachvarov.svg";
+import Profile1 from "../assets/profile1.svg";
 
 type Props = {
     onCreate: (newPost: {
@@ -28,7 +28,7 @@ const CreateNewPost = ({ onCreate }: Props) => {
         onCreate({
             Id: Math.floor(Math.random() * 1000),
             userName: "Ivaylo Bachvarov",
-            profilePicture: IvayloBachvarov,
+            profilePicture: Profile1,
             companyTitle: "Co-Founder",
             companyName: "HackSoft",
             content: data.get("new-post") as string,

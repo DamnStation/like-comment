@@ -6,7 +6,7 @@ module.exports = {
     backgroundImage: {
       "bottom-triangle-element":
         "url('src/assets/bottom-triangle-element.svg')",
-      hack_soft_orange_asset: "url('src/assets/hack_soft_orange_asset.svg')",
+      orange_asset: "url('src/assets/orange_asset.svg')",
     },
     fontFamily: {
       sans: ["Roboto"],
