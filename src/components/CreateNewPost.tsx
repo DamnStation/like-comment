@@ -27,10 +27,10 @@ const CreateNewPost = ({ onCreate }: Props) => {
         if (value === "") return
         onCreate({
             Id: Math.floor(Math.random() * 1000),
-            userName: "Ivaylo Bachvarov",
+            userName: "Radoslav Marinov",
             profilePicture: Profile1,
             companyTitle: "Co-Founder",
-            companyName: "HackSoft",
+            companyName: "ViewRT",
             content: data.get("new-post") as string,
             likedBy: [],
             dateToSeconds: resultInSeconds,
