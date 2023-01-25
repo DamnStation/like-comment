@@ -1,4 +1,4 @@
-# Front-end task for HackSoft
+# React with TypeScript
 
 ---
 
@@ -24,7 +24,7 @@ To run this comand for creating new React application you must have installed no
 
 If you want you can open it in separate window by holding `` ` Shift ` `` key and mouse right click on the folder, then choose `"Open PowerShell window here"`.
 
-Or CMD by type `cmd` in File explorer wile you are in the folder of the project.
+Or CMD by type `cmd` in File explorer while you are in the folder of the project.
 
 - Step 4: When you are in the terminal run command `npm install` to install all dependencies required for the project to run.
 
