@@ -2,7 +2,7 @@
 
 React with TypeScrypt application created by Vite
 
-- `npm create vite@latest hack-soft-task --react-ts`
+- `npm create vite@latest like-comment --react-ts`
 
 To run this comand for creating new React application you must have installed nodejs on your PC. If you don't have it you can download it from here:
 
