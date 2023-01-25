@@ -1,8 +1,4 @@
-# React with TypeScript
-
----
-
-## React Application
+# React Application
 
 React with TypeScrypt application created by Vite
 
