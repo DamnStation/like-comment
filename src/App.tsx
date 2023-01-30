@@ -4,14 +4,14 @@ import Profile from "./components/Profile"
 import Post from "./components/Post"
 import { usePosts } from "./hooks/usePosts"
 import { useUser } from "./hooks/useUser"
-import { memo, useEffect, useState } from "react"
+import { memo, useState } from "react"
 import ButtonCusom from "./components/ButtonCustom"
 
 
 const App = () => {
 
-  const { user, updateUser } = useUser()
-  const { posts, upsertPost, likeDislikePost } = usePosts()
+  const { user, updateUser } = useUser();
+  const { posts, upsertPost, likeDislikePost } = usePosts();
 
   const postPerRow = 3;
 
@@ -24,15 +24,12 @@ const App = () => {
   const onCreate = (newPost: typeof posts[0]) => {
     upsertPost(newPost)
     updateUser({ ...user, posts: user.posts + 1 });
-  }
+  };
 
   const onClickLike = (postProp: number, userProp: number) => {
     const addOrRemoveCount = likeDislikePost(postProp, userProp)
     updateUser({ ...user, likes: user.likes + addOrRemoveCount })
-  }
-
-  useEffect(() => {
-  }, [posts])
+  };
 
   return (
     <Layout>
