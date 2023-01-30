@@ -3,11 +3,6 @@ module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {},
-    backgroundImage: {
-      "bottom-triangle-element":
-        "url('/src/assets/bottom-triangle-element.svg')",
-      orange_asset: "url('/src/assets/orange_asset.svg')",
-    },
     fontFamily: {
       sans: ["Roboto"],
       roboto: ["Roboto", "sans-serif"],
