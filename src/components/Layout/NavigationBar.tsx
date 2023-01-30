@@ -4,10 +4,6 @@ import Profile1 from "../../assets/profile1.svg"
 
 const NavigationBar = () => {
 
-  const onClick = () => {
-    console.log("Click")
-  }
-
   return (
     <div className="
         flex 
@@ -27,7 +23,6 @@ const NavigationBar = () => {
       <img
         src={Profile1}
         alt="Profile Picture"
-        onClick={onClick}
         className="right-1 m-1 rounded-full w-9 h-9 hover:scale-110 transition-all "
       />
     </div>

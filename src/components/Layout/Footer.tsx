@@ -19,7 +19,7 @@ const Footer = () => {
         transition-all 
         z-20
         ">
-            Copyright 2022 ViewRT Ltd. All rights reserved. No part of this site may be reproduced without our written permission.
+            Copyright {new Date().getFullYear()} ViewRT Ltd. All rights reserved. No part of this site may be reproduced without our written permission.
         </div>
     )
 }
