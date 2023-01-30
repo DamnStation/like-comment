@@ -1,5 +1,7 @@
 # React Application
 
+You can see the website at: https://damnstation.github.io/like-comment/
+
 React with TypeScrypt application created by Vite
 
 - `npm create vite@latest like-comment --react-ts`
