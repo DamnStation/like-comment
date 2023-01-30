@@ -5,8 +5,8 @@ module.exports = {
     extend: {},
     backgroundImage: {
       "bottom-triangle-element":
-        "url('src/assets/bottom-triangle-element.svg')",
-      orange_asset: "url('src/assets/orange_asset.svg')",
+        "url('/src/assets/bottom-triangle-element.svg')",
+      orange_asset: "url('/src/assets/orange_asset.svg')",
     },
     fontFamily: {
       sans: ["Roboto"],
